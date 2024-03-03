@@ -7,7 +7,7 @@ import plugins.echo.editor.*;
 
 import freenet.pluginmanager.FredPlugin;
 import freenet.pluginmanager.FredPluginHTTP;
-import freenet.pluginmanager.FredPluginHTTPAdvanced;
+// import freenet.pluginmanager.FredPluginHTTPAdvanced;
 import freenet.pluginmanager.FredPluginThreadless;
 import freenet.pluginmanager.PluginRespirator;
 import freenet.pluginmanager.PluginHTTPException;
@@ -30,7 +30,7 @@ import java.util.MissingResourceException;
 //	* var Project / projectManager
 
 
-public class Echo implements FredPlugin, FredPluginHTTP, FredPluginHTTPAdvanced, FredPluginThreadless {
+public class Echo implements FredPlugin, FredPluginHTTP, FredPluginThreadless {
 			
 	public static final String BASE_URL = "/plugins/plugins.echo.Echo/";
 	public static final File BASE_DIR = new File("plugins/Echo/");

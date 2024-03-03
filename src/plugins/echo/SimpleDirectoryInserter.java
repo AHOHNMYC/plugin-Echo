@@ -5,7 +5,7 @@ import freenet.clients.fcp.FCPClient;
 import freenet.clients.fcp.ClientRequest;
 import freenet.clients.fcp.ClientPutDir;
 import freenet.clients.fcp.IdentifierCollisionException;
-import freenet.clients.RequestStarter;
+import freenet.node.RequestStarter;
 import freenet.keys.FreenetURI;
 
 import java.io.File;
@@ -44,7 +44,7 @@ public class SimpleDirectoryInserter {
 	      							"echo-" + System.currentTimeMillis(),
 	      							Integer.MAX_VALUE,
 	      							RequestStarter.BULK_SPLITFILE_PRIORITY_CLASS,
-	      							ClientRequest.PERSIST_FOREVER,
+	      							ClientRequest.Persistence.FOREVER,
 	      							null,
 	      							false,
 	      							false,

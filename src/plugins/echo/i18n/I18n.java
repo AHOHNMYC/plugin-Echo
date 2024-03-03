@@ -16,7 +16,7 @@ import plugins.echo.Echo;
 */
 public class I18n {
 	
-	public static final String[] AVAILABLE_LANGUAGES = { "en", "fr" };
+	public static final String[] AVAILABLE_LANGUAGES = { "en", "fr", "ru" };
 	public static final String DEFAULT_LANGUAGE = "en"; 
 	public static final String PREFIX = "/i18n/echo.i18n.";
 	public static final String SUFFIX = ".properties";
@@ -60,7 +60,7 @@ public class I18n {
 			props.load(Echo.class.getClassLoader().getResourceAsStream(PREFIX + language + SUFFIX));
 			//props.load(I18n.class.getClassLoader().getResourceAsStream(PREFIX + language + SUFFIX));
 		} catch (Exception ioe) {
-			Logger.error("I18n", "IOException while accessing the " + language +"file" + ioe.getMessage(), ioe);
+			Logger.error("I18n", "IOException while accessing the " + language + " file " + ioe.getMessage(), ioe);
 			throw new MissingResourceException("Unable to load the translation file for " + language, "i18n", language);
 		}
 	}

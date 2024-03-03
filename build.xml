@@ -8,7 +8,9 @@
 	<property name="build.dir" location="build/" />
 	<property name="dist.dir" location="dist/" />
 	<property name="javadoc.dir" location="javadoc" />
-	<property name="freenet-cvs-snapshot.location" location="/home/svn-build/freenet-alpha.jar" />
+	<property name="freenet-cvs-snapshot.location" location="../fred/dist/freenet.jar" />
+	<property name="source-version" value="1.6"/>
+	<property name="target-version" value="1.6"/>
 
 	<property name="xom.location" value="${lib.dir}/xom-1.2b2.jar" />
 	<available file="${xom.location}" property="xom_available" />

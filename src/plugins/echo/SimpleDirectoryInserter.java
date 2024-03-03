@@ -1,11 +1,11 @@
 package plugins.echo;
 
-import freenet.clients.node.fcp.FCPServer;
-import freenet.clients.node.fcp.FCPClient;
-import freenet.clients.node.fcp.ClientRequest;
-import freenet.clients.node.fcp.ClientPutDir;
-import freenet.clients.node.fcp.IdentifierCollisionException;
-import freenet.clients.node.RequestStarter;
+import freenet.clients.fcp.FCPServer;
+import freenet.clients.fcp.FCPClient;
+import freenet.clients.fcp.ClientRequest;
+import freenet.clients.fcp.ClientPutDir;
+import freenet.clients.fcp.IdentifierCollisionException;
+import freenet.clients.RequestStarter;
 import freenet.keys.FreenetURI;
 
 import java.io.File;

@@ -8,7 +8,7 @@ import plugins.echo.SimpleDirectoryInserter;
 import freenet.keys.FreenetURI;
 import freenet.keys.USK;
 import freenet.support.api.HTTPRequest;
-import freenet.node.fcp.FCPServer;
+import freenet.clients.fcp.FCPServer;
 
 import java.io.File;
 import java.net.MalformedURLException;

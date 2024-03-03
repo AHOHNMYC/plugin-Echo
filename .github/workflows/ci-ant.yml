@@ -20,8 +20,9 @@ jobs:
     - name: Download freenet.jar
       run: |
         sudo chown -R runner ../..
-        mkdir -p ../fred/dist
+        mkdir -p ../fred/dist lib
         wget https://github.com/hyphanet/fred/releases/download/build01497/freenet.jar -qO ../fred/dist/freenet.jar
+        wget https://github.com/elharo/xom/releases/download/v1.3.9/xom-1.3.9.jar -qO lib/xom-1.3.9.jar1
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
     - name: Upload Echo

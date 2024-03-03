@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 
 <project name="Echo" default="dist">
-
 	<property name="src.dir" location="src/" />
 	<property name="images.dir" location="images/" />
 	<property name="lib.dir" location="lib/" />
@@ -12,10 +11,11 @@
 	<property name="source-version" value="1.6"/>
 	<property name="target-version" value="1.6"/>
 
-	<property name="xom.location" value="${lib.dir}/xom-1.2b2.jar" />
+	<property name="xom.filename" value="xom-1.3.9.jar" />
+	<property name="xom.location" value="${lib.dir}/${xom.filename}" />
 	<available file="${xom.location}" property="xom_available" />
 	<fail unless="xom_available" status="1"
-	message="You need to download xom-1.2b2.jar from http://www.xom.nu/unstable.html and to put it in lib/" />
+	message="You need to download ${xom.filename} from http://www.xom.nu/unstable.html and to put it in ${lib.dir}" />
 
 	<target name="init">
 		<tstamp/>
@@ -28,7 +28,7 @@
 	
 	<target name="compile" depends="init">
 
-		<javac srcdir="${src.dir}" destdir="${build.dir}" debug="true" optimize="true">
+		<javac srcdir="${src.dir}" destdir="${build.dir}" debug="true" optimize="true" source="${source-version}" target="${target-version}" includeantruntime="false">
 			<classpath>
 				<pathelement location="${freenet-cvs-snapshot.location}"/>
 				<fileset dir="${lib.dir}">
